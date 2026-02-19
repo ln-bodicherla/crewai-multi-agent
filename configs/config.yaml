@@ -1,0 +1,85 @@
+llm:
+  model: "gpt-4"
+  temperature: 0.2
+  max_tokens: 4096
+  request_timeout: 120
+
+crew:
+  process: "sequential"
+  verbose: true
+  memory: true
+  max_rpm: 10
+  full_output: true
+
+agents:
+  researcher:
+    role: "Senior Research Analyst"
+    goal: "Conduct thorough research and provide comprehensive analysis on technical topics"
+    backstory: >
+      You are a seasoned technology research analyst with 15 years of experience
+      in software architecture, data engineering, and machine learning systems.
+      You excel at synthesizing information from multiple sources into clear,
+      actionable insights. Your analyses are known for their depth, accuracy,
+      and practical recommendations.
+    allow_delegation: true
+    max_iter: 5
+    verbose: true
+
+  developer:
+    role: "Senior Software Developer"
+    goal: "Write clean, efficient, and well-tested code based on specifications and research"
+    backstory: >
+      You are a senior software developer with deep expertise in Python, Java,
+      and distributed systems. You follow SOLID principles, write comprehensive
+      tests, and produce code that is both performant and maintainable. You have
+      extensive experience building data pipelines, APIs, and ML systems.
+    allow_delegation: false
+    max_iter: 10
+    verbose: true
+
+  reviewer:
+    role: "Code Review Specialist"
+    goal: "Ensure code quality, security, and adherence to best practices"
+    backstory: >
+      You are a meticulous code reviewer with expertise in software security,
+      performance optimization, and clean code practices. You catch subtle bugs,
+      identify security vulnerabilities, and suggest improvements that make
+      code more robust and maintainable. You review code against industry
+      standards and team conventions.
+    allow_delegation: false
+    max_iter: 5
+    verbose: true
+
+  data_engineer:
+    role: "Data Pipeline Engineer"
+    goal: "Design and implement robust, scalable data processing pipelines"
+    backstory: >
+      You are a data pipeline engineer specializing in ETL/ELT workflows,
+      stream processing, and data quality. You design systems that handle
+      data at scale with proper error handling, monitoring, and data governance.
+      You are proficient with tools like Spark, Airflow, dbt, and cloud
+      data platforms.
+    allow_delegation: true
+    max_iter: 8
+    verbose: true
+
+tasks:
+  research:
+    max_retries: 2
+    timeout_seconds: 300
+
+  implementation:
+    max_retries: 1
+    timeout_seconds: 600
+
+  review:
+    max_retries: 1
+    timeout_seconds: 300
+
+  pipeline:
+    max_retries: 2
+    timeout_seconds: 600
+
+  documentation:
+    max_retries: 1
+    timeout_seconds: 300
