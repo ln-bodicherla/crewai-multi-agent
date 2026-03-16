@@ -1,47 +1,64 @@
-# Python
+
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-*.egg-info/
-dist/
-build/
-eggs/
-*.egg
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# OS
+!.env.example
+!.env.sample
+.build/
 .DS_Store
-Thumbs.db
-
-# Environment
+.eggs/
 .env
+.env.*
 .env.local
 .env.production
-
-# Logs
-*.log
-logs/
-
-# Crew outputs
-outputs/
-crew_results/
-
-# Jupyter
+.idea/
 .ipynb_checkpoints/
-
-# API keys
-secrets/
+.swiftpm/
+.venv/
+.vscode/
+*.app
+*.db
+*.db-shm
+*.db-wal
+*.egg
+*.egg-info/
+*.ipa
 *.key
+*.log
 *.pem
+*.py[cod]
+*.pyc
+*.secret
+*.so
+*.sqlite
+*.sqlite3
+*.swo
+*.swp
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*~
+*$py.class
+# API keys
+# Build
+# Crew outputs
+# Databases
+# Dependencies
+# Environment
+# IDE
+# Jupyter
+# Logs
+# OS
+# Python
+# Secrets
+# Virtual environments
+build/
+credentials*
+crew_results/
+DerivedData/
+dist/
+eggs/
+env/
+logs/
+node_modules/
+outputs/
+secrets/
+Thumbs.db
+venv/
