@@ -49,7 +49,7 @@ This project explores CrewAI as an alternative to LangGraph for multi-agent syst
 | Learning Curve | Lower | Higher |
 | Flexibility | Convention-based | Full control |
 
-**Decision**: LangGraph was chosen for the production system due to its fine-grained control over agent state transitions and conditional routing, which was critical for the complex decision trees in the workflow.
+**Decision**: LangGraph (see `langgraph-multi-agent`) was chosen for the primary project due to its fine-grained control over agent state transitions and conditional routing, which was critical for the complex decision trees in the workflow.
 
 ## Project Structure
 
